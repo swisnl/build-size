@@ -49,9 +49,11 @@ require('yargs')
         let previousSizes = JSON.parse(fs.readFileSync(args.shift(), 'utf8'));
         let newSizes = JSON.parse(fs.readFileSync(args.shift(), 'utf8'));
 
-        let compared = require('../src/compare')(previousSizes, newSizes, argv.format === 'markdown');
-        if (argv.format !== 'markdown') {
-            compared = JSON.stringify(compared);
+        let compared = require('../src/compare')(previousSizes, newSizes);
+        if (argv.format === 'markdown') {
+            compared = require('../src/format')(compared);
+        } else {
+            compared = JSON.stringify(compared, null, 2);
         }
         process.stdout.write(compared);
     })
