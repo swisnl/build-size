@@ -1,0 +1,12 @@
+{
+    "name": "@swisnl/build-size",
+    "version": "0.0.1",
+    "dependencies": {
+        "filesize": "^3.5.11",
+        "glob": "^7.1.2",
+        "glob-to-regexp": "^0.3.0",
+        "markdown-escape": "^1.0.2",
+        "yargs": "^10.0.3"
+    },
+    "bin": "./bin/build-size.js"
+}
