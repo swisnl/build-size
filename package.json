@@ -1,5 +1,5 @@
 {
-  "name": "@swisnl/build-size",
+  "name": "@swis/build-size",
   "description": "Parse and compare build sizes",
   "keywords": [
     "build",

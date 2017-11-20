@@ -1,6 +1,6 @@
-# @swisnl/build-size
+# @swis/build-size
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/@swisnl/build-size.svg)](https://www.npmjs.com/package/@swisnl/build-size)
+[![Latest Version on NPM](https://img.shields.io/npm/v/@swis/build-size.svg)](https://www.npmjs.com/package/@swisnl/build-size)
 [![Software License](https://img.shields.io/github/license/swisnl/build-size.svg)](LICENSE) 
 
 Parse and compare build size
@@ -9,17 +9,17 @@ Parse and compare build size
 
 Install with Yarn:
 ```bash
-$ yarn add @swisnl/build-size --dev
+$ yarn add @swis/build-size --dev
 ```
 
 Install with npm:
 ```bash
-$ npm install --save-dev @swisnl/build-size
+$ npm install --save-dev @swis/build-size
 ```
 
 ## License
 
-`@swisnl/build-size` is licensed under the MIT License - see the LICENSE file for details
+`@swis/build-size` is licensed under the MIT License - see the LICENSE file for details
 
 ## Credits
 
