@@ -1,3 +1,4 @@
+'use strict';
 const fs = require('fs');
 const glob = require('glob');
 const globToRegExp = require('glob-to-regexp');

@@ -1,3 +1,5 @@
+'use strict';
+
 function compareFileSizes(previousSizes, newSizes) {
     return Object.keys(Object.assign({}, previousSizes, newSizes)).map(function (fileName) {
         let previousSize = previousSizes[fileName] || null;

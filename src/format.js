@@ -1,3 +1,4 @@
+'use strict';
 const filesize = require('filesize');
 const markdownEscape = require('markdown-escape');
 
