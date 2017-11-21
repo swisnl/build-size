@@ -1,4 +1,5 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
+'use strict';
 const fs = require('fs');
 
 // noinspection BadExpressionStatementJS
@@ -71,6 +72,6 @@ require('yargs')
 
 function checkCommands(yargs, argv, numRequired) {
     if (argv._.length < numRequired) {
-        yargs.showHelp()
+        yargs.showHelp();
     }
 }

@@ -13,7 +13,7 @@ function compareFileSizes(previousSizes, newSizes) {
                 bytes: getDifferenceInBytes(previousSize, newSize),
                 percentage: getDifferenceInPercentage(previousSize, newSize)
             }
-        }
+        };
     });
 }
 
@@ -29,7 +29,7 @@ function compareTotalFileSizes(previousSizes, newSizes) {
             bytes: getDifferenceInBytes(previousSize, newSize),
             percentage: getDifferenceInPercentage(previousSize, newSize)
         }
-    }
+    };
 }
 
 function getDifferenceInBytes(previousSize, newSize) {

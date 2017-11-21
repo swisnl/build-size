@@ -1,7 +1,9 @@
 # @swis/build-size
 
+[![Node Version](https://img.shields.io/node/v/@swis/build-size.svg)](https://www.npmjs.com/package/@swis/build-size)
 [![Latest Version on NPM](https://img.shields.io/npm/v/@swis/build-size.svg)](https://www.npmjs.com/package/@swis/build-size)
-[![Software License](https://img.shields.io/github/license/swisnl/build-size.svg)](LICENSE) 
+[![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) 
+[![Software License](https://img.shields.io/github/license/swisnl/build-size.svg)](LICENSE)
 
 Parse and compare build size
 
