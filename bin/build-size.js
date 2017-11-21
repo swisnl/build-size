@@ -3,15 +3,15 @@ const fs = require('fs');
 
 // noinspection BadExpressionStatementJS
 require('yargs')
-    .usage('Usage: $0 <command> [options]')
+    .usage('Usage: build-size <command> [options]')
     .demandCommand(1, 'Must provide a valid command')
     .command('parse', 'Parse build size of files matching provided pattern(s)', function parseCommand(yargs) {
         let argv = yargs
-            .usage('Usage: $0 parse <pattern> [<pattern>] [options]')
-            .example('$0 parse ./css/*.css ./js/*.js', 'Parse multiple patterns e.g. ./css/app.css, ./js/app.js, ./js/vendor.js')
-            .example('$0 parse ./js/**/*.js', 'Parse recursive pattern e.g. ./js/app.js, ./js/vendor/vue.js')
-            .example('$0 parse ./js/*.[hash].js', 'Parse pattern with hash e.g. ./js/app.33fcb75f3ed81fc89123.js')
-            .example('$0 parse ./js/*.js > parse.json', 'Parse and store output in parse.json')
+            .usage('Usage: build-size parse <pattern> [<pattern>] [options]')
+            .example('build-size parse ./css/*.css ./js/*.js', 'Parse multiple patterns e.g. ./css/app.css, ./js/app.js, ./js/vendor.js')
+            .example('build-size parse ./js/**/*.js', 'Parse recursive pattern e.g. ./js/app.js, ./js/vendor/vue.js')
+            .example('build-size parse ./js/*.[hash].js', 'Parse pattern with hash e.g. ./js/app.33fcb75f3ed81fc89123.js')
+            .example('build-size parse ./js/*.js > parse.json', 'Parse and store output in parse.json')
             .positional('pattern', {
                 describe: 'Glob pattern to match files. N.B. [hash] can be used as special matching pattern for hashed files',
                 normalize: true,
@@ -29,9 +29,9 @@ require('yargs')
     })
     .command('compare', 'Compare build sizes using output from parse command', function compareCommand(yargs) {
         let argv = yargs
-            .usage('Usage: $0 compare <previous> <new> [options]')
-            .example('$0 compare ./previous.json ./new.json', 'Compare two sets of build sizes and output results as Markdown')
-            .example('$0 compare ./previous.json ./new.json --format=json', 'Compare two sets of build sizes and output results as JSON')
+            .usage('Usage: build-size compare <previous> <new> [options]')
+            .example('build-size compare ./previous.json ./new.json', 'Compare two sets of build sizes and output results as Markdown')
+            .example('build-size compare ./previous.json ./new.json --format=json', 'Compare two sets of build sizes and output results as JSON')
             .positional('previous', {
                 describe: 'File with parse results of previous build i.e. output from parse command',
                 normalize: true,
