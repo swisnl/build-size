@@ -13,7 +13,7 @@ function getMarkdownForDifferences(difference, includeTotal = true) {
         rows.unshift('');
         rows.unshift(
             markdownEscape(
-                `This change will ${totalDifference.difference.bytes >= 0 ? 'increase' : 'decrease'} the build size from ${filesize(totalDifference.previousSize)} to ${filesize(totalDifference.newSize)}, ${totalDifference.difference.bytes >= 0 ? 'an increase' : 'a decrease'} of ${filesize(totalDifference.difference.bytes)} (${totalDifference.difference.percentage}%)`
+                `This change will ${totalDifference.difference.bytes >= 0 ? 'increase' : 'decrease'} the build size from ${filesize(totalDifference.previousSize)} to ${filesize(totalDifference.newSize)}, ${totalDifference.difference.bytes >= 0 ? 'an increase' : 'a decrease'} of ${filesize(Math.abs(totalDifference.difference.bytes))} (${totalDifference.difference.percentage}%)`
             )
         );
     }

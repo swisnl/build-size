@@ -40,8 +40,6 @@ function getDifferenceInBytes(previousSize, newSize) {
     } else if (newSize) {
         return newSize;
     }
-
-    return 0;
 }
 
 function getDifferenceInPercentage(previousSize, newSize) {
@@ -54,8 +52,6 @@ function getDifferenceInPercentage(previousSize, newSize) {
     } else if (newSize) {
         return 100;
     }
-
-    return 0;
 }
 
 module.exports = function compare(previousSizes, newSizes) {

@@ -21,8 +21,6 @@ function getFileSizeInBytes(filePatterns) {
 
                 if (regExpResult) {
                     result[fileName.replace(regExpResult[1], '[hash]')] = resultOriginalFileNames[fileName];
-                } else {
-                    result[fileName] = resultOriginalFileNames[fileName];
                 }
             });
         } else {
