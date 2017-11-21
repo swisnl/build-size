@@ -1,7 +1,7 @@
-# @swis/build-size
+# build-size
 
-[![Node Version](https://img.shields.io/node/v/@swis/build-size.svg)](https://www.npmjs.com/package/@swis/build-size)
-[![Latest Version on NPM](https://img.shields.io/npm/v/@swis/build-size.svg)](https://www.npmjs.com/package/@swis/build-size)
+[![Node Version](https://img.shields.io/node/v/build-size.svg)](https://www.npmjs.com/package/build-size)
+[![Latest Version on NPM](https://img.shields.io/npm/v/build-size.svg)](https://www.npmjs.com/package/build-size)
 [![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) 
 [![Software License](https://img.shields.io/github/license/swisnl/build-size.svg)](LICENSE)
 
@@ -11,12 +11,12 @@ Parse and compare build size
 
 Install locally with npm:
 ```bash
-$ npm install --save-dev @swis/build-size
+$ npm install --save-dev build-size
 ```
 
 Install globally with npm:
 ```bash
-$ npm install --global @swis/build-size
+$ npm install --global build-size
 ```
 
 ## Basic usage
@@ -81,7 +81,7 @@ css\/app.css | 23.92 KB | 23.92 KB | +0 B \(0%\)
 
 ## License
 
-`@swis/build-size` is licensed under the MIT License - see the [LICENSE file](LICENSE) for details
+`build-size` is licensed under the MIT License - see the [LICENSE file](LICENSE) for details
 
 ## Credits
 
