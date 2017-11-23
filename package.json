@@ -21,10 +21,7 @@
   "bugs": {
     "url": "https://github.com/swisnl/build-size/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/swisnl/build-size/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "dependencies": {
     "filesize": "^3.5.11",
     "glob": "^7.1.2",
