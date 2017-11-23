@@ -2,8 +2,10 @@
 
 [![Node Version](https://img.shields.io/node/v/build-size.svg)](https://www.npmjs.com/package/build-size)
 [![Latest Version on NPM](https://img.shields.io/npm/v/build-size.svg)](https://www.npmjs.com/package/build-size)
-[![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) 
+[![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![Software License](https://img.shields.io/github/license/swisnl/build-size.svg)](LICENSE)
+[![Run Status](https://api.shippable.com/projects/5a0cd55ce39749070006a49e/badge?branch=master)](https://app.shippable.com/github/swisnl/build-size)
+[![Code Coverage](https://api.shippable.com/projects/5a0cd55ce39749070006a49e/coverageBadge?branch=master)](https://app.shippable.com/github/swisnl/build-size) 
 
 Parse and compare build size
 
