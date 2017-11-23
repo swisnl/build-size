@@ -24,14 +24,14 @@ $ npm install --global build-size
 Locally with npm:
 ```bash
 # Display help
-$ npm run build-size --help
+$ npm run build-size -- --help
 
 # Parse
-$ npm run build-size parse ./previous/**/*.js ./previous/**/*.css > previous.json
-$ npm run build-size parse ./new/**/*.js ./new/**/*.css > new.json
+$ npm run build-size -- parse ./previous/**/*.js ./previous/**/*.css > previous.json
+$ npm run build-size -- parse ./new/**/*.js ./new/**/*.css > new.json
 
 # Compare
-$ npm run build-size compare previous.json new.json
+$ npm run build-size -- compare previous.json new.json
 ```
 
 Globally:
