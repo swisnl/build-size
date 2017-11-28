@@ -32,7 +32,7 @@ function getMarkdownForDifferences(difference, includeTotal = true, disableImage
         row.push(markdownEscape(file.fileName));
         row.push(file.previousSize ? filesize(file.previousSize) : 'x');
         row.push(file.newSize ? filesize(file.newSize) : 'x');
-        row.push((file.difference.bytes > 0 ? increaseIcon+' ' : file.difference.bytes < 0 ? decreaseIcon+' ' : '') + markdownEscape(`${filesize(file.difference.bytes)} (${file.difference.percentage}%)`));
+        row.push((file.difference.bytes > 0 ? increaseIcon+' ' : file.difference.bytes < 0 ? decreaseIcon+' ' : '') + markdownEscape(`${filesize(Math.abs(file.difference.bytes))} (${file.difference.percentage}%)`));
 
         return row.join(' | ');
     }));

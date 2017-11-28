@@ -154,8 +154,8 @@ describe('build-size', function () {
                 '\n' +
                 'File name | Previous size | New size | Change\n' +
                 '--- | --- | --- | ---\n' +
-                'app.js | 200 B | 250 B | +50 B \\(25%\\)\n' +
-                'app.css | 400 B | 500 B | +100 B \\(25%\\)'
+                'app.js | 200 B | 250 B | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 50 B \\(25%\\)\n' +
+                'app.css | 400 B | 500 B | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 100 B \\(25%\\)'
             );
         });
 
@@ -196,8 +196,8 @@ describe('build-size', function () {
                 '\n' +
                 'File name | Previous size | New size | Change\n' +
                 '--- | --- | --- | ---\n' +
-                'app.js | 250 B | 200 B | -50 B \\(20%\\)\n' +
-                'app.css | 500 B | 400 B | -100 B \\(20%\\)'
+                'app.js | 250 B | 200 B | ![▼](https://swisnl.github.io/build-size/images/decrease.svg "Decrease") 50 B \\(20%\\)\n' +
+                'app.css | 500 B | 400 B | ![▼](https://swisnl.github.io/build-size/images/decrease.svg "Decrease") 100 B \\(20%\\)'
             );
         });
 
@@ -228,8 +228,8 @@ describe('build-size', function () {
                 ),
                 'File name | Previous size | New size | Change\n' +
                 '--- | --- | --- | ---\n' +
-                'app.js | 200 B | 250 B | +50 B \\(25%\\)\n' +
-                'app.css | 400 B | 500 B | +100 B \\(25%\\)'
+                'app.js | 200 B | 250 B | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 50 B \\(25%\\)\n' +
+                'app.css | 400 B | 500 B | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 100 B \\(25%\\)'
             );
         });
 
@@ -251,7 +251,7 @@ describe('build-size', function () {
                 ),
                 'File name | Previous size | New size | Change\n' +
                 '--- | --- | --- | ---\n' +
-                'app.js | x | 250 B | +250 B \\(100%\\)'
+                'app.js | x | 250 B | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 250 B \\(100%\\)'
             );
         });
 
@@ -273,7 +273,7 @@ describe('build-size', function () {
                 ),
                 'File name | Previous size | New size | Change\n' +
                 '--- | --- | --- | ---\n' +
-                'app.js | 250 B | x | -250 B \\(100%\\)'
+                'app.js | 250 B | x | ![▼](https://swisnl.github.io/build-size/images/decrease.svg "Decrease") 250 B \\(100%\\)'
             );
         });
     });
