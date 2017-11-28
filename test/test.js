@@ -276,5 +276,28 @@ describe('build-size', function () {
                 'app.js | 250 B | x | ![▼](https://swisnl.github.io/build-size/images/decrease.svg "Decrease") 250 B \\(100%\\)'
             );
         });
+
+        it('should format results without images', function () {
+            assert.equal(
+                buildSize.format(
+                    [
+                        {
+                            fileName: 'app.js',
+                            previousSize: 250,
+                            newSize: null,
+                            difference: {
+                                bytes: -250,
+                                percentage: 100
+                            }
+                        }
+                    ],
+                    false,
+                    true
+                ),
+                'File name | Previous size | New size | Change\n' +
+                '--- | --- | --- | ---\n' +
+                'app.js | 250 B | x | ▼ 250 B \\(100%\\)'
+            );
+        });
     });
 });
