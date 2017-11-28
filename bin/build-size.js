@@ -47,6 +47,10 @@ require('yargs')
                 choices: ['json', 'markdown'],
                 default: 'markdown'
             })
+            .option('disable-images', {
+                type: 'boolean',
+                default: 'false'
+            })
             .argv;
         checkCommands(yargs, argv, 3);
     }, function compare(argv) {
@@ -58,7 +62,7 @@ require('yargs')
 
         let compared = require('../src/compare')(previousSizes, newSizes);
         if (argv.format === 'markdown') {
-            compared = require('../src/format')(compared);
+            compared = require('../src/format')(compared, true, argv.disableImages);
         } else {
             compared = JSON.stringify(compared, null, 2);
         }

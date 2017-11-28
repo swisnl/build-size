@@ -2,11 +2,19 @@
 const filesize = require('filesize');
 const markdownEscape = require('markdown-escape');
 
-function getMarkdownForDifferences(difference, includeTotal = true) {
+function getMarkdownForDifferences(difference, includeTotal = true, disableImages = false) {
     let rows = [
         'File name | Previous size | New size | Change',
         '--- | --- | --- | ---'
     ];
+
+    let increaseIcon = '![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase")';
+    let decreaseIcon = '![▼](https://swisnl.github.io/build-size/images/decrease.svg "Decrease")';
+
+    if (disableImages) {
+        increaseIcon = '▲';
+        decreaseIcon = '▼';
+    }
 
     if (includeTotal) {
         let totalDifference = difference.pop();
@@ -24,7 +32,7 @@ function getMarkdownForDifferences(difference, includeTotal = true) {
         row.push(markdownEscape(file.fileName));
         row.push(file.previousSize ? filesize(file.previousSize) : 'x');
         row.push(file.newSize ? filesize(file.newSize) : 'x');
-        row.push(markdownEscape(`${file.difference.bytes >= 0 ? '+' : ''}${filesize(file.difference.bytes)} (${file.difference.percentage}%)`));
+        row.push((file.difference.bytes > 0 ? increaseIcon+' ' : file.difference.bytes < 0 ? decreaseIcon+' ' : '') + markdownEscape(`${filesize(file.difference.bytes)} (${file.difference.percentage}%)`));
 
         return row.join(' | ');
     }));
