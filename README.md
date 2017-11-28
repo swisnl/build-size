@@ -75,10 +75,10 @@ This change will increase the build size from 610.71 KB to 616.04 KB, an increas
 
 File name | Previous size | New size | Change
 --- | --- | --- | ---
-js\/app.js | 129.98 KB | 135.32 KB | +5.33 KB \(4%\)
-js\/manifest.js | 1.44 KB | 1.45 KB | +2 B \(0%\)
-js\/vendor.js | 455.36 KB | 455.36 KB | +0 B \(0%\)
-css\/app.css | 23.92 KB | 23.92 KB | +0 B \(0%\)
+js\/app.js | 129.98 KB | 135.32 KB | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 5.33 KB \(4%\)
+js\/manifest.js | 1.44 KB | 1.45 KB | ![▲](https://swisnl.github.io/build-size/images/increase.svg "Increase") 2 B \(0%\)
+js\/vendor.js | 455.36 KB | 455.36 KB | 0 B \(0%\)
+css\/app.css | 23.92 KB | 23.92 KB | 0 B \(0%\)
 ```
 
 ## License
