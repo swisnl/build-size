@@ -33,6 +33,7 @@ require('yargs')
             .usage('Usage: build-size compare <previous> <new> [options]')
             .example('build-size compare ./previous.json ./new.json', 'Compare two sets of build sizes and output results as Markdown')
             .example('build-size compare ./previous.json ./new.json --format=json', 'Compare two sets of build sizes and output results as JSON')
+            .example('build-size compare ./previous.json ./new.json --omit-output-if-equal', 'Compare two sets of build sizes, but omit output when both sets are equal i.e. nothing changed between builds')
             .positional('previous', {
                 describe: 'File with parse results of previous build i.e. output from parse command',
                 normalize: true,
@@ -51,6 +52,10 @@ require('yargs')
                 type: 'boolean',
                 default: 'false'
             })
+            .option('omit-output-if-equal', {
+                type: 'boolean',
+                default: 'false'
+            })
             .argv;
         checkCommands(yargs, argv, 3);
     }, function compare(argv) {
@@ -59,6 +64,12 @@ require('yargs')
 
         let previousSizes = JSON.parse(fs.readFileSync(args.shift(), 'utf8'));
         let newSizes = JSON.parse(fs.readFileSync(args.shift(), 'utf8'));
+
+        if (argv.omitOutputIfEqual) {
+            if (JSON.stringify(previousSizes) === JSON.stringify(newSizes)) {
+                return;
+            }
+        }
 
         let compared = require('../src/compare')(previousSizes, newSizes);
         if (argv.format === 'markdown') {
