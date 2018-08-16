@@ -83,6 +83,18 @@ css\/app.css | 23.92 KB | 23.92 KB | 0 B \(0%\)
 ```
 
 
+## Testing
+
+``` bash
+$ npm test
+```
+
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
+
+
 ## Security
 
 If you discover any security related issues, please email security@swis.nl instead of using the issue tracker.
