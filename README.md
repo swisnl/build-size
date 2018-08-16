@@ -6,6 +6,7 @@
 [![Software License](https://img.shields.io/github/license/swisnl/build-size.svg)](LICENSE)
 [![Run Status](https://api.shippable.com/projects/5a0cd55ce39749070006a49e/badge?branch=master)](https://app.shippable.com/github/swisnl/build-size)
 [![Code Coverage](https://api.shippable.com/projects/5a0cd55ce39749070006a49e/coverageBadge?branch=master)](https://app.shippable.com/github/swisnl/build-size) 
+[![Made by SWIS](https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%23D9021B.svg)](https://www.swis.nl)
 
 Parse and compare build size
 
@@ -81,10 +82,22 @@ js\/vendor.js | 455.36 KB | 455.36 KB | 0 B \(0%\)
 css\/app.css | 23.92 KB | 23.92 KB | 0 B \(0%\)
 ```
 
-## License
 
-`build-size` is licensed under the MIT License - see the [LICENSE file](LICENSE) for details
+## Security
+
+If you discover any security related issues, please email security@swis.nl instead of using the issue tracker.
+
 
 ## Credits
 
 Inspired by [BuildSize](https://github.com/Daniel15/BuildSize) and similar projects, such as [bundlesize](https://github.com/siddharthkp/bundlesize) and [Size Limit](https://github.com/ai/size-limit).
+
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
+
+
+## SWIS
+
+[SWIS](https://www.swis.nl) is a web agency from Leiden, the Netherlands. We love working with open source software.
