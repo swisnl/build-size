@@ -32,6 +32,7 @@ require('yargs')
         let argv = yargs
             .usage('Usage: build-size compare <previous> <new> [options]')
             .example('build-size compare ./previous.json ./new.json', 'Compare two sets of build sizes and output results as Markdown')
+            .example('build-size compare ./previous.json ./new.json --exclude-unchanged', 'Compare two sets of build sizes and exclude unchanged files')
             .example('build-size compare ./previous.json ./new.json --format=json', 'Compare two sets of build sizes and output results as JSON')
             .example('build-size compare ./previous.json ./new.json --omit-output-if-equal', 'Compare two sets of build sizes, but omit output when both sets are equal i.e. nothing changed between builds')
             .positional('previous', {
@@ -49,6 +50,10 @@ require('yargs')
                 default: 'markdown'
             })
             .option('disable-images', {
+                type: 'boolean',
+                default: 'false'
+            })
+            .option('exclude-unchanged', {
                 type: 'boolean',
                 default: 'false'
             })
@@ -71,7 +76,7 @@ require('yargs')
             }
         }
 
-        let compared = require('../src/compare')(previousSizes, newSizes);
+        let compared = require('../src/compare')(previousSizes, newSizes, argv.excludeUnchanged);
         if (argv.format === 'markdown') {
             compared = require('../src/format')(compared, true, argv.disableImages);
         } else {

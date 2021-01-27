@@ -100,6 +100,13 @@ describe('build-size', function () {
             );
         });
 
+        it('can exclude files with equal size', function () {
+            assert.equal(
+                buildSize.compare({'app.js': 250}, {'app.js': 250}, true).length,
+                1 // N.B. Only a total comparison
+            );
+        });
+
         it('should add a total comparison', function () {
             assert.deepEqual(
                 buildSize.compare({'app.js': 200, 'app.css': 400}, {'app.js': 250, 'app.css': 500}).pop(),

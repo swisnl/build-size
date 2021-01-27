@@ -54,6 +54,12 @@ function getDifferenceInPercentage(previousSize, newSize) {
     }
 }
 
-module.exports = function compare(previousSizes, newSizes) {
-    return compareFileSizes(previousSizes, newSizes).concat([compareTotalFileSizes(previousSizes, newSizes)]);
+module.exports = function compare(previousSizes, newSizes, excludeUnchanged) {
+    let files = compareFileSizes(previousSizes, newSizes);
+
+    if (excludeUnchanged) {
+        files = files.filter(file => file.difference.bytes > 0);
+    }
+
+    return files.concat([compareTotalFileSizes(previousSizes, newSizes)]);
 };
