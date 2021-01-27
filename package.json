@@ -51,6 +51,6 @@
   "main": "index.js",
   "bin": "bin/build-size.js",
   "engines": {
-    "node": ">=7.0.0"
+    "node": ">=10.0.0"
   }
 }

@@ -2,10 +2,9 @@ language: node_js
 
 # http://docs.shippable.com/platform/runtime/machine-image/language-versions/#nodejs
 node_js:
-  - "7.10.1"
-  - "8.11.3"
-  - "9.11.2"
-  - "10.6.0"
+  - "10.15.1"
+  - "12.20.1"
+  - "14.15.4"
 
 build:
   ci:
