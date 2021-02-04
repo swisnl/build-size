@@ -102,8 +102,8 @@ describe('build-size', function () {
 
         it('can exclude files with equal size', function () {
             assert.equal(
-                buildSize.compare({'app.js': 250}, {'app.js': 250}, true).length,
-                1 // N.B. Only a total comparison
+                buildSize.compare({'app.js': 250, 'app.css': 250, 'app.img': 250}, {'app.js': 200, 'app.css': 250, 'app.img': 300}, true).length,
+                3 // app.js, app.img and a total comparison
             );
         });
 
