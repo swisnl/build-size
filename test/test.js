@@ -296,6 +296,15 @@ describe('build-size', function () {
                                 bytes: -250,
                                 percentage: 100
                             }
+                        },
+                        {
+                            fileName: 'app.css',
+                            previousSize: null,
+                            newSize: 500,
+                            difference: {
+                                bytes: 500,
+                                percentage: 100
+                            }
                         }
                     ],
                     false,
@@ -303,7 +312,8 @@ describe('build-size', function () {
                 ),
                 'File name | Previous size | New size | Change\n' +
                 '--- | --- | --- | ---\n' +
-                'app.js | 250 B | x | ▼ 250 B \\(-100%\\)'
+                'app.js | 250 B | x | \uD83D\uDFE2 250 B \\(-100%\\)\n' +
+                'app.css | x | 500 B | \uD83D\uDD34 500 B \\(+100%\\)'
             );
         });
     });

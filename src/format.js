@@ -12,8 +12,8 @@ function getMarkdownForDifferences(difference, includeTotal = true, disableImage
     let decreaseIcon = '![▼](https://swisnl.github.io/build-size/images/decrease.svg "Decrease")';
 
     if (disableImages) {
-        increaseIcon = '▲';
-        decreaseIcon = '▼';
+        increaseIcon = '\uD83D\uDD34';
+        decreaseIcon = '\uD83D\uDFE2';
     }
 
     if (includeTotal) {
