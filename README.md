@@ -4,6 +4,7 @@
 [![Latest Version on NPM](https://img.shields.io/npm/v/build-size.svg?style=flat-square)](https://www.npmjs.com/package/build-size)
 [![Code Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 [![Software License](https://img.shields.io/github/license/swisnl/build-size.svg?style=flat-square)](LICENSE)
+[![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen.svg?style=flat-square)](https://plant.treeware.earth/swisnl/build-size)
 [![Run Status](https://img.shields.io/travis/com/swisnl/build-size/master.svg?style=flat-square)](https://travis-ci.com/swisnl/build-size)
 [![Made by SWIS](https://img.shields.io/badge/%F0%9F%9A%80-made%20by%20SWIS-%23D9021B.svg?style=flat-square)](https://www.swis.nl)
 
@@ -108,7 +109,9 @@ Inspired by [BuildSize](https://github.com/Daniel15/BuildSize) and similar proje
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
+This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/swisnl/build-size) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
 
-## SWIS
+
+## SWIS :heart: Open Source
 
 [SWIS](https://www.swis.nl) is a web agency from Leiden, the Netherlands. We love working with open source software.
